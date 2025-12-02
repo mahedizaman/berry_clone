@@ -3,7 +3,7 @@ import Container from "./Container";
 
 const Footer = () => {
   return (
-    <div className="bg-purple-50 py-4">
+    <div className="bg-purple-50 py-4 fixed bottom-0 w-full">
       <Container className="flex flex-col md:flex-row items-center justify-between gap-3">
         <div className="text-gray-500 text-xs text-center md:text-left">
           Copyright © 2025

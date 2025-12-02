@@ -7,7 +7,7 @@ const page = () => {
     <Container>
       <Hero/>
     </Container>
-  )
+  );
 }
 
 export default page
