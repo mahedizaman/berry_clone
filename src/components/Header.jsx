@@ -6,19 +6,20 @@ import { BaggageClaim, User } from "lucide-react";
 
 const Header = () => {
   return (
-    <div className="py-4">
+    <div className="py-4 border-b mb-10">
       <Container>
-        <header className="flex flex-col md:flex-row items-center justify-between gap-3">
+        <header className="flex flex-col md:flex-row items-start justify-between gap-2">
           <Link href={"/"}>
             <Image
               src="/images/logo.png"
               alt="Berry logo"
-              width={160}
-              height={60}
+              width={260}
+              height={120}
               priority
-              className="h-auto w-auto"
+              className="w-26 sm:w-26 md:w-26 lg:w-26 h-auto"
             />
           </Link>
+
           <form className="w-full sm:w-auto sm:flex-1 sm:mx-4 sm:mt-0">
             <input
               type="text"
