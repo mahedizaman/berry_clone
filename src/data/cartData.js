@@ -1,7 +1,7 @@
 const cartData = [
   {
     id: 1,
-    image: "/assets/images/cart/cart.png",
+    image: "/assets/images/cart/cart.jpg",
     category: "spices",
     heading: "Black Pepper Spice Pack",
     rating: 4.8,
@@ -12,7 +12,7 @@ const cartData = [
   },
   {
     id: 2,
-    image: "/assets/images/cart/cart2.png",
+    image: "/assets/images/cart/cart2.jpg",
     category: "spices",
     heading: "Chilli Flakes Pack",
     rating: 4.0,
@@ -23,7 +23,7 @@ const cartData = [
   },
   {
     id: 3,
-    image: "/assets/images/cart/cart3.png",
+    image: "/assets/images/cart/cart3.jpg",
     category: "chips",
     heading: "Crunchy Banana Chips",
     rating: 5.0,
@@ -34,7 +34,7 @@ const cartData = [
   },
   {
     id: 4,
-    image: "/assets/images/cart/cart4.png",
+    image: "/assets/images/cart/cart4.jpg",
     category: "chips",
     heading: "Crunchy Potato Chips",
     rating: 4.5,
@@ -45,7 +45,7 @@ const cartData = [
   },
   {
     id: 5,
-    image: "/assets/images/cart/cart5.png",
+    image: "/assets/images/cart/cart5.jpg",
     category: "Juice",
     heading: "Demo Juice Rdatlites",
     rating: 4.9,
@@ -56,7 +56,7 @@ const cartData = [
   },
   {
     id: 6,
-    image: "/assets/images/cart/cart6.png",
+    image: "/assets/images/cart/cart6.jpg",
     category: "Juice",
     heading: "Fresh Mango Slice Juice",
     rating: 4.6,
@@ -67,7 +67,7 @@ const cartData = [
   },
   {
     id: 7,
-    image: "/assets/images/cart/cart7.png",
+    image: "/assets/images/cart/cart7.jpg",
     category: "Juice",
     heading: "Ground Nuts Oil Pack",
     rating: 3.89,
@@ -78,7 +78,7 @@ const cartData = [
   },
   {
     id: 8,
-    image: "/assets/images/cart/cart8.png",
+    image: "/assets/images/cart/cart8.jpg",
     category: "Juice",
     heading: "Mixed Almond Juice",
     rating: 5.0,
@@ -89,7 +89,7 @@ const cartData = [
   },
   {
     id: 9,
-    image: "/assets/images/cart/cart9.png",
+    image: "/assets/images/cart/cart9.jpg",
     category: "Chocolates",
     heading: "Mixed Fruits Chocolates",
     rating: 4.7,
@@ -100,7 +100,7 @@ const cartData = [
   },
   {
     id: 10,
-    image: "/assets/images/cart/cart10.png",
+    image: "/assets/images/cart/cart10.jpg",
     category: "Juice",
     heading: "Organic Apple Juice Pack",
     rating: 4.8,
@@ -111,7 +111,7 @@ const cartData = [
   },
   {
     id: 11,
-    image: "/assets/images/cart/cart11.png",
+    image: "/assets/images/cart/cart11.jpg",
     category: "Spices",
     heading: "Small Cardamom Spices",
     rating: 4.0,
@@ -122,7 +122,7 @@ const cartData = [
   },
   {
     id: 12,
-    image: "/assets/images/cart/cart12.png",
+    image: "/assets/images/cart/cart12.jpg",
     category: "sauces",
     heading: "Tomato Ketchup Pack",
     rating: 4.3,

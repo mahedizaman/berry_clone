@@ -11,7 +11,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <Carousel className="w-full max-w-7xl  mx-auto mb-40">
+    <Carousel className="w-full max-w-7xl  mx-auto ">
       <CarouselContent className="flex-1 mx-auto ">
         <CarouselItem className="flex flex-col md:flex-row items-center justify-between border-2 rounded-xl gap-4 py-6">
           <div className="flex flex-col items-start justify-between gap-4">
