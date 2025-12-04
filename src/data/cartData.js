@@ -8,7 +8,8 @@ const cartData = [
     price: 52,
     views: 20,
     stocks: "In Stock",
-    description: "",
+    available: 5,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eaque nesciunt voluptatem consequuntur maiores eos, excepturi quidem alias dolore optio, rem eum suscipit fugit, modi soluta corporis ab deserunt quasi tempora accusamus laboriosam iste labore facere veniam? Veritatis, modi exercitationem quam, nam, qui laudantium magni unde ipsam voluptatem aut laboriosam.",
   },
   {
     id: 2,
@@ -19,7 +20,8 @@ const cartData = [
     price: 28,
     views: 25,
     stocks: "In Stock",
-    description: "",
+    available: 5,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eaque nesciunt voluptatem consequuntur maiores eos, excepturi quidem alias dolore optio, rem eum suscipit fugit, modi soluta corporis ab deserunt quasi tempora accusamus laboriosam iste labore facere veniam? Veritatis, modi exercitationem quam, nam, qui laudantium magni unde ipsam voluptatem aut laboriosam.",
   },
   {
     id: 3,
@@ -30,7 +32,8 @@ const cartData = [
     price: 7,
     views: 27,
     stocks: "In Stock",
-    description: "",
+    available: 5,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eaque nesciunt voluptatem consequuntur maiores eos, excepturi quidem alias dolore optio, rem eum suscipit fugit, modi soluta corporis ab deserunt quasi tempora accusamus laboriosam iste labore facere veniam? Veritatis, modi exercitationem quam, nam, qui laudantium magni unde ipsam voluptatem aut laboriosam.",
   },
   {
     id: 4,
@@ -41,7 +44,8 @@ const cartData = [
     price: 31,
     views: 28,
     stocks: "In Stock",
-    description: "",
+    available: 5,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eaque nesciunt voluptatem consequuntur maiores eos, excepturi quidem alias dolore optio, rem eum suscipit fugit, modi soluta corporis ab deserunt quasi tempora accusamus laboriosam iste labore facere veniam? Veritatis, modi exercitationem quam, nam, qui laudantium magni unde ipsam voluptatem aut laboriosam.",
   },
   {
     id: 5,
@@ -52,7 +56,8 @@ const cartData = [
     price: 25,
     views: 21,
     stocks: "In Stock",
-    description: "",
+    available: 5,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eaque nesciunt voluptatem consequuntur maiores eos, excepturi quidem alias dolore optio, rem eum suscipit fugit, modi soluta corporis ab deserunt quasi tempora accusamus laboriosam iste labore facere veniam? Veritatis, modi exercitationem quam, nam, qui laudantium magni unde ipsam voluptatem aut laboriosam.",
   },
   {
     id: 6,
@@ -63,7 +68,8 @@ const cartData = [
     price: 34,
     views: 30,
     stocks: "Out of Stock",
-    description: "",
+    available: 0,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eaque nesciunt voluptatem consequuntur maiores eos, excepturi quidem alias dolore optio, rem eum suscipit fugit, modi soluta corporis ab deserunt quasi tempora accusamus laboriosam iste labore facere veniam? Veritatis, modi exercitationem quam, nam, qui laudantium magni unde ipsam voluptatem aut laboriosam.",
   },
   {
     id: 7,
@@ -74,7 +80,8 @@ const cartData = [
     price: 18,
     views: 40,
     stocks: "In Stock",
-    description: "",
+    available: 5,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eaque nesciunt voluptatem consequuntur maiores eos, excepturi quidem alias dolore optio, rem eum suscipit fugit, modi soluta corporis ab deserunt quasi tempora accusamus laboriosam iste labore facere veniam? Veritatis, modi exercitationem quam, nam, qui laudantium magni unde ipsam voluptatem aut laboriosam.",
   },
   {
     id: 8,
@@ -85,7 +92,8 @@ const cartData = [
     price: 53,
     views: 10,
     stocks: "In Stock",
-    description: "",
+    available: 5,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eaque nesciunt voluptatem consequuntur maiores eos, excepturi quidem alias dolore optio, rem eum suscipit fugit, modi soluta corporis ab deserunt quasi tempora accusamus laboriosam iste labore facere veniam? Veritatis, modi exercitationem quam, nam, qui laudantium magni unde ipsam voluptatem aut laboriosam.",
   },
   {
     id: 9,
@@ -96,7 +104,8 @@ const cartData = [
     price: 28,
     views: 59,
     stocks: "In Stock",
-    description: "",
+    available: 5,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eaque nesciunt voluptatem consequuntur maiores eos, excepturi quidem alias dolore optio, rem eum suscipit fugit, modi soluta corporis ab deserunt quasi tempora accusamus laboriosam iste labore facere veniam? Veritatis, modi exercitationem quam, nam, qui laudantium magni unde ipsam voluptatem aut laboriosam.",
   },
   {
     id: 10,
@@ -107,7 +116,8 @@ const cartData = [
     price: 25,
     views: 200,
     stocks: "Out of Stock",
-    description: "",
+    available: 0,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eaque nesciunt voluptatem consequuntur maiores eos, excepturi quidem alias dolore optio, rem eum suscipit fugit, modi soluta corporis ab deserunt quasi tempora accusamus laboriosam iste labore facere veniam? Veritatis, modi exercitationem quam, nam, qui laudantium magni unde ipsam voluptatem aut laboriosam.",
   },
   {
     id: 11,
@@ -118,7 +128,8 @@ const cartData = [
     price: 35,
     views: 150,
     stocks: "In Stock",
-    description: "",
+    available: 5,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eaque nesciunt voluptatem consequuntur maiores eos, excepturi quidem alias dolore optio, rem eum suscipit fugit, modi soluta corporis ab deserunt quasi tempora accusamus laboriosam iste labore facere veniam? Veritatis, modi exercitationem quam, nam, qui laudantium magni unde ipsam voluptatem aut laboriosam.",
   },
   {
     id: 12,
@@ -129,7 +140,8 @@ const cartData = [
     price: 22,
     views: 89,
     stocks: "In Stock",
-    description: "",
+    available: 5,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eaque nesciunt voluptatem consequuntur maiores eos, excepturi quidem alias dolore optio, rem eum suscipit fugit, modi soluta corporis ab deserunt quasi tempora accusamus laboriosam iste labore facere veniam? Veritatis, modi exercitationem quam, nam, qui laudantium magni unde ipsam voluptatem aut laboriosam.",
   },
 ];
 

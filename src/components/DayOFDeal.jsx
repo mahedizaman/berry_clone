@@ -1,12 +1,17 @@
-import React from 'react'
-import Container from './Container'
+"use client";
+
+import React from 'react';
+import Container from './Container';
 import cartData from '@/data/cartData';
 import Image from 'next/image';
 import { Button } from './ui/button';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { Eye, Heart, Share, ShoppingCart } from 'lucide-react';
 
 const DayOFDeal = () => {
+    const router = useRouter();
+
     return (
         <Container className="mb-20">
             <div className="mb-6">
@@ -19,9 +24,10 @@ const DayOFDeal = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {cartData.map((item, index) => (
-                    <div
-                        key={item.id || index}
+                {cartData.map((item) => (
+                    <Link
+                        href={`/product/${item.id}`}
+                        key={item.id}
                         className="border rounded-lg overflow-hidden group"
                     >
                         <div className="relative overflow-hidden">
@@ -30,27 +36,30 @@ const DayOFDeal = () => {
                                 alt={item.heading}
                                 width={320}
                                 height={450}
-                                className="w-full h-auto cursor-pointer object-contain transition-transform duration-300 ease-in-out group-hover:scale-110 "
+                                className="w-full h-auto object-contain transition-transform duration-300 ease-in-out group-hover:scale-110"
                             />
 
-                            <div className="absolute bottom-2 left-0 right-0 flex items-center justify-center gap-3 
-    opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 
-    transition-all duration-300 ease-in-out">
-
-                                <Link href={`/wishlist/${item.id}`} className="bg-purple-100 p-2 rounded-xl hover:bg-purple-500 hover:text-white transition transform hover:scale-110">
-                                    <Heart size={20} />
-                                </Link>
-                                <Link href={`/product/${item.id}`} className="bg-purple-100 p-2 rounded-xl hover:bg-purple-500 hover:text-white transition transform hover:scale-110">
-                                    <Eye size={20} />
-                                </Link>
-                                <Link href={`/share/${item.id}`} className="bg-purple-100 p-2 rounded-xl hover:bg-purple-500 hover:text-white transition transform hover:scale-110">
-                                    <Share size={20} />
-                                </Link>
-                                <Link href={`/cart/add/${item.id}`} className="bg-purple-100 p-2 rounded-xl hover:bg-purple-500 hover:text-white transition transform hover:scale-110">
-                                    <ShoppingCart size={20} />
-                                </Link>
+                            <div
+                                className="absolute bottom-2 left-0 right-0 flex items-center justify-center gap-3 
+                  opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 
+                  transition-all duration-300 ease-in-out"
+                                onClick={(e) => e.stopPropagation()} 
+                            >
+                                {[
+                                    { icon: Heart, link: `/wishlist/${item.id}` },
+                                    { icon: Eye, link: `/product/${item.id}` },
+                                    { icon: Share, link: `/share/${item.id}` },
+                                    { icon: ShoppingCart, link: `/cart/add/${item.id}` },
+                                ].map((btn, idx) => (
+                                    <div
+                                        key={idx}
+                                        className="bg-purple-100 p-2 rounded-xl hover:bg-purple-500 hover:text-white transition transform hover:scale-110"
+                                        onClick={() => router.push(btn.link)}
+                                    >
+                                        <btn.icon size={20} />
+                                    </div>
+                                ))}
                             </div>
-
                         </div>
 
                         <div className="p-4 flex flex-col gap-2 border-t-2 py-8">
@@ -64,11 +73,11 @@ const DayOFDeal = () => {
                                 Add to cart
                             </Button>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </Container>
     );
-}
+};
 
 export default DayOFDeal;
