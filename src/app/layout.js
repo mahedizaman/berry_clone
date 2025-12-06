@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import { Poppins } from "next/font/google";
+import { CartProvider } from "@/context/CartContext";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -19,9 +20,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
-        <Header className="h-screen"/>
-        {children}
-        <Footer />
+        <CartProvider>
+          <Header className="h-screen" />
+          {children}
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );

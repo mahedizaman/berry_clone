@@ -1,10 +1,14 @@
+"use client"
 import Image from "next/image";
 import Container from "./Container";
 import Link from "next/link";
 import { BaggageClaim, User } from "lucide-react";
+import { useCart } from "@/context/CartContext";
 
 
 const Header = () => {
+  const { cart } = useCart();
+  const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
   return (
     <div className="py-4 border-b mb-10">
       <Container>
@@ -35,8 +39,8 @@ const Header = () => {
             >
               <BaggageClaim size={24} className="text-purple-400" />
               <div className="flex flex-col items-center justify-between ">
-                <p className="text-xs text-gray-600">0 Items</p>
-                <p className="text-xs text-gray-600 font-bold">Cart</p>
+                <p className="text-xs text-gray-600">{totalItems} Items</p>
+                <p className="text-xs text-gray-600 font-bold">Cart </p>
               </div>
             </Link>
             <Link
