@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import { Poppins } from "next/font/google";
 import { CartProvider } from "@/context/CartContext";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </CartProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
