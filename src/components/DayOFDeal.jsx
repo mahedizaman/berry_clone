@@ -9,6 +9,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Eye, Heart, Share, ShoppingCart } from "lucide-react";
 import { useCart } from "@/context/CartContext";
+import toast from "react-hot-toast";
 
 const DayOFDeal = () => {
   const router = useRouter();
@@ -72,16 +73,17 @@ const DayOFDeal = () => {
               <h4 className="font-medium text-gray-500">{item.heading}</h4>
               <p className="font-semibold text-gray-500">{`$${item.price}`}</p>
               <Button
-                onClick={() => addToCart(item)}
+                onClick={() => {
+                  addToCart(item);
+                  toast.success(`${item.heading} added to cart!`);
+                }}
                 disabled={item.available === 0}
                 className={`border transition ease-in ${
                   item.available === 0
                     ? "bg-gray-400 text-gray-500 cursor-not-allowed"
                     : "bg-purple-50 text-gray-600 hover:bg-purple-400 cursor-pointer"
-                }
-                                         `}
+                }`}
               >
-                {" "}
                 Add to cart
               </Button>
             </div>
