@@ -6,6 +6,8 @@ import { useCart } from "@/context/CartContext";
 import cartData from "@/data/cartData";
 import { Star } from "lucide-react";
 import Image from "next/image";
+import toast from "react-hot-toast";
+
 
 export default function Page({ params }) {
   const unwrapped = React.use(params); // 🔥 FIX
@@ -75,7 +77,10 @@ export default function Page({ params }) {
 
           {/* ADD TO CART */}
           <button
-            onClick={() => addToCart(product)}
+            onClick={() => {
+              addToCart(product);
+              toast.success("Added to cart!");
+            }}
             disabled={product.available === 0}
             className={`w-full sm:w-fit px-6 py-3 rounded-lg text-white transition ${
               product.available === 0
