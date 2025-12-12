@@ -98,7 +98,7 @@ const cartData = [
   {
     id: 9,
     image: "/assets/images/cart/cart9.jpg",
-    category: "Chocolates",
+    category: "chocos",
     heading: "Mixed Fruits Chocolates",
     rating: 4.7,
     price: 28,

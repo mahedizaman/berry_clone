@@ -11,9 +11,16 @@ import { Eye, Heart, Share, ShoppingCart } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import toast from "react-hot-toast";
 
-const DayOFDeal = () => {
+const DayOFDeal = ({ selectedCategory }) => {
   const router = useRouter();
   const { addToCart } = useCart();
+
+  // Filter logic
+  const filteredProducts = selectedCategory
+    ? cartData.filter(
+        (item) => item.category.toLowerCase() === selectedCategory.toLowerCase()
+      )
+    : cartData;
 
   return (
     <Container className="mb-20">
@@ -26,8 +33,14 @@ const DayOFDeal = () => {
         </p>
       </div>
 
+      {/* If no product found */}
+      {filteredProducts.length === 0 && (
+        <p className="text-gray-500 text-lg">No products found.</p>
+      )}
+
+      {/* Product grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {cartData.map((item) => (
+        {filteredProducts.map((item) => (
           <div
             key={item.id}
             className="border rounded-lg overflow-hidden group"
@@ -65,13 +78,16 @@ const DayOFDeal = () => {
                 </div>
               </div>
             </Link>
+
             <div className="p-4 flex flex-col gap-2 border-t-2 py-8">
               <div className="flex justify-between text-gray-500 text-sm">
                 <p>{item.category}</p>
                 <p>{item.rating}</p>
               </div>
+
               <h4 className="font-medium text-gray-500">{item.heading}</h4>
               <p className="font-semibold text-gray-500">{`$${item.price}`}</p>
+
               <Button
                 onClick={() => {
                   addToCart(item);
