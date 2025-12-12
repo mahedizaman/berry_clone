@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Poppins } from "next/font/google";
 import { CartProvider } from "@/context/CartContext";
 import ToasterWrapper from "@/components/ToasterWrapper";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
           <ToasterWrapper />
 
           {children}
+          <SpeedInsights />
           <Footer />
         </CartProvider>
       </body>
